@@ -6,6 +6,7 @@
 body {
   background-color: teal;
   font-family: vcr;
+  margin: 0;
 }
 
 button {
@@ -50,4 +51,39 @@ h1.title {
   padding: 15px;
   margin-bottom: 10px;
   width: 500px;
+}
+
+.edit-screen {
+  display: flex;
+}
+
+.edit-screen .files {
+  width: 50%;
+  height: 30%;
+  background-color: silver;
+  border-bottom: 4px white ridge;
+  border-right: 2px white ridge;
+  padding: 10px;
+  overflow: auto;
+}
+
+.edit-screen .preview {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 30%;
+  padding: 10px;
+  background-color: gray;
+  border-bottom: 4px white ridge;
+  border-left: 2px white ridge;
+}
+
+.edit-screen .preview video {
+  max-width: 800px;
+  max-height: 600px;
+  width: auto;
+  height: 100%;
+  background-color: black;
 }

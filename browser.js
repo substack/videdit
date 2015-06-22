@@ -20,9 +20,6 @@ var root = document.querySelector('#content');
 root.insertBefore(loop.target, root.children[0]);
 root.removeChild(root.children[1]);
 
-var catchLinks = require('catch-links');
-catchLinks(window, show);
-
 function render (state) {
     var m = router.match(state.href);
     if (m) return m.fn({
@@ -32,3 +29,13 @@ function render (state) {
     });
     return h('div', []);
 }
+
+var catchLinks = require('catch-links');
+catchLinks(window, show);
+
+var dragdrop = require('drag-drop');
+dragdrop(window, function (files) {
+    console.log('files=', files);
+});
+
+var upload = require('upload-element');
