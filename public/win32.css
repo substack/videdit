@@ -1,0 +1,45 @@
+@font-face {
+  font-family: vcr;
+  src: url(vcr.ttf) format('truetype');
+}
+
+body {
+  background-color: teal;
+  font-family: vcr;
+}
+
+button {
+  font-family: vcr;
+  background-color: silver;
+  border: white 5px outset;
+  color: white;
+  text-shadow: 2px 2px gray;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: gray;
+  text-shadow: 2px 2px black;
+}
+
+h1.title {
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  text-shadow: 5px 5px silver;
+  width: 500px;
+  margin: auto;
+}
+
+.menu {
+  width: 500px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.menu .option {
+  font-size: 30px;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
