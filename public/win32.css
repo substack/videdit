@@ -19,7 +19,15 @@ button {
 
 button:hover {
   background-color: gray;
+  border-color: silver;
   text-shadow: 2px 2px black;
+}
+
+button:active {
+  background-color: cyan;
+  color: white;
+  text-shadow: 2px 2px teal;
+  border-color: cyan;
 }
 
 h1.title {
@@ -37,9 +45,9 @@ h1.title {
   margin-top: 25px;
 }
 
-.menu .option {
+.menu-item {
   font-size: 30px;
   padding: 15px;
   margin-bottom: 10px;
-  width: 100%;
+  width: 500px;
 }
