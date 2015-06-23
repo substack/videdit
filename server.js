@@ -13,7 +13,13 @@ var server = http.createServer(function (req, res) {
     if (m) {
         res.setHeader('content-type', 'text/html');
         read('index.html').pipe(hyperstream({
-            '#content': tostr(m.fn({ params: m.params }))
+            '#content': tostr(m.fn({
+                params: m.params,
+                state: {
+                    href: req.url,
+                    timeline: { start: 0, end: 90 }
+                }
+            }))
         })).pipe(res);
     }
     else st(req, res)

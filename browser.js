@@ -1,7 +1,11 @@
 var h = require('virtual-dom/h');
 var url = require('url');
 var router = require('./routes');
-var state = { href: location.pathname };
+var state = {
+    href: location.pathname,
+    timeline: { start: 0, end: 90 },
+    width: window.innerWidth
+};
 
 var singlePage = require('single-page');
 var show = singlePage(function (href) {
@@ -10,6 +14,11 @@ var show = singlePage(function (href) {
         state.href = u.pathname;
         loop.update(state);
     }
+});
+
+window.addEventListener('resize', function (ev) {
+    state.width = window.innerWidth;
+    loop.update(state);
 });
 
 var vdom = require('virtual-dom');

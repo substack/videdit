@@ -53,7 +53,7 @@ h1.title {
   width: 500px;
 }
 
-.edit-screen {
+.edit-screen .top {
   display: flex;
 }
 
@@ -86,4 +86,24 @@ h1.title {
   width: auto;
   height: 100%;
   background-color: black;
+}
+
+.timeline {
+  padding-left: 20px;
+  background-color: cyan;
+  color: teal;
+}
+
+.timeline .timeline-inner {
+  flex-flow: row;
+  height: 1em;
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.timeline .label {
+  display: inline-block;
+  border-left: 2px solid teal;
+  padding-left: 2px;
 }
